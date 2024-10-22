@@ -1,0 +1,132 @@
+/* External CSS */
+
+/* Menu styles */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+.menu a:hover {
+    background-color: #111;
+}
+
+/* Text sizing */
+.text-em {
+    font-size: 2em;
+}
+
+.text-px {
+    font-size: 24px;
+}
+
+.text-pt {
+    font-size: 18pt;
+}
+
+.text-percent {
+    font-size: 150%;
+}
+
+/* Background image */
+.background-image {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+}
+
+/* Box model and positioning */
+.box {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    position: relative;
+}
+
+.box-absolute {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.box-fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.box-float {
+    float: left;
+}
+
+/* Text formatting */
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+/* Border properties */
+.border-example {
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Pseudo-classes and pseudo-elements */
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+p::before {
+    content: "Note: ";
+    font-weight: bold;
+}
