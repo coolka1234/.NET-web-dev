@@ -106,7 +106,7 @@
 
 .top-level-menu a /* Apply to all links inside the multi-level menu */
 {
-    font: bold 14px Arial, Helvetica, sans-serif;
+    font-family: bold 14px Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     text-decoration: none;
     padding: 0 0 0 10px;
@@ -123,25 +123,24 @@
 }
 
 .text-px {
-    font-size: 24px;
+    font-size: 8px;
 }
 
 .text-pt {
-    font-size: 3pt;
+    font-size: 30pt;
 }
 
 .text-percent {
     font-size: 300%;
 }
 
-/* Background image */
 .background-image {
     background-image: url('https://static.vecteezy.com/system/resources/previews/045/839/426/non_2x/seamless-creative-geometric-triangle-pattern-repeatable-monochrome-background-decorative-endless-black-and-white-illusion-3d-texture-vector.jpg');
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
+    height: 100vh; 
+    width: 100vw; 
 }
 
 .background-image-half{
@@ -149,28 +148,27 @@
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
-    height: 50vh; /* Half viewport height */
-    width: 50vw; /* Half viewport width */
+    height: 50vh; 
+    width: 50vw; 
 }
 .background-image-no-repeat {
     background-image: url('https://static.vecteezy.com/system/resources/previews/045/839/426/non_2x/seamless-creative-geometric-triangle-pattern-repeatable-monochrome-background-decorative-endless-black-and-white-illusion-3d-texture-vector.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
+    height: 100vh; 
+    width: 100vw; 
 }
 .background-image-fixed {
     background-image: url('https://static.vecteezy.com/system/resources/previews/045/839/426/non_2x/seamless-creative-geometric-triangle-pattern-repeatable-monochrome-background-decorative-endless-black-and-white-illusion-3d-texture-vector.jpg');
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
+    height: 100vh; 
+    width: 100vw; 
     position: fixed;
 }
 
-/* Box model and positioning */
 .box {
     margin: 10px;
     padding: 20px;
@@ -196,7 +194,6 @@
     float: left;
 }
 
-/* Text formatting */
 .text-bold {
     font-weight: bold;
 }
@@ -209,14 +206,12 @@
     text-decoration: underline;
 }
 
-/* Border properties */
 .border-example {
     border-width: 2px;
     border-style: solid;
     border-color: red;
 }
 
-/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -232,13 +227,18 @@ th {
     background-color: #f2f2f2;
 }
 
-/* Pseudo-classes and pseudo-elements */
 a:hover {
     color: red;
 }
 
 a:visited {
     color: purple;
+}
+
+input:checked {
+    color: green;
+    border: #000000;
+    outline: 2px solid deeppink;
 }
 
 p::first-line {
@@ -249,3 +249,8 @@ p::before {
     content: "Note: ";
     font-weight: bold;
 }
+#header {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
