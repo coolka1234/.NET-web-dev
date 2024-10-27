@@ -75,6 +75,23 @@
     height: 50vh; /* Half viewport height */
     width: 50vw; /* Half viewport width */
 }
+.background-image-no-repeat {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/045/839/426/non_2x/seamless-creative-geometric-triangle-pattern-repeatable-monochrome-background-decorative-endless-black-and-white-illusion-3d-texture-vector.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+.background-image-fixed {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/045/839/426/non_2x/seamless-creative-geometric-triangle-pattern-repeatable-monochrome-background-decorative-endless-black-and-white-illusion-3d-texture-vector.jpg');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: fixed;
+}
 
 /* Box model and positioning */
 .box {
