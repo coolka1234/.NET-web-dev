@@ -26,7 +26,7 @@
 
 /* Text sizing */
 .text-em {
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .text-px {
@@ -34,11 +34,11 @@
 }
 
 .text-pt {
-    font-size: 18pt;
+    font-size: 3pt;
 }
 
 .text-percent {
-    font-size: 150%;
+    font-size: 300%;
 }
 
 /* Background image */
