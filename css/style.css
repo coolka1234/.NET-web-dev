@@ -63,6 +63,9 @@
 .menu a:hover {
     background-color: #111;
 }
+.third-level-menu a:hover {
+    background-color: #333;
+}
 .third-level-menu
 {
     position: absolute;
