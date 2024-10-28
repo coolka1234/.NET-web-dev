@@ -1,6 +1,4 @@
-/* External CSS */
 
-/* Menu styles */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -8,6 +6,33 @@
     background-color: #333;
 }
 
+.fourth-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+.fourth-level-menu > li
+{
+    height: 30px;
+    background: #999999;
+}
+.third-level-menu > li:hover { background: #CCCCCC; }
+.third-level-menu > li:hover .fourth-level-menu
+{
+    display: inline;
+}
+.third-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background: #999999;
+}
 .menu li {
     display: inline;
     margin-right: 10px;
@@ -19,7 +44,6 @@
     padding: 14px 20px;
     display: inline-block;
 }
-/* Dropdown styles */
 .menu li .dropdown-content {
     display: none;
     position: absolute;
@@ -97,27 +121,23 @@
 
 .top-level-menu li:hover > ul
 {
-    /* On hover, display the next level's menu */
     display: inline;
 }
 
 
-/* Menu Link Styles */
 
-.top-level-menu a /* Apply to all links inside the multi-level menu */
+.top-level-menu a
 {
     font-family: bold 14px Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     text-decoration: none;
     padding: 0 0 0 10px;
 
-    /* Make the link cover the entire list item-container */
     display: block;
     line-height: 30px;
 }
 .top-level-menu a:hover { color: #000000; }
 
-/* Text sizing */
 .text-em {
     font-size: 1em;
 }
@@ -138,9 +158,10 @@
     background-image: url('https://static.vecteezy.com/system/resources/previews/045/839/426/non_2x/seamless-creative-geometric-triangle-pattern-repeatable-monochrome-background-decorative-endless-black-and-white-illusion-3d-texture-vector.jpg');
     background-repeat: repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 200px;
     height: 100vh; 
     width: 100vw; 
+    
 }
 
 .background-image-half{
