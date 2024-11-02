@@ -5,32 +5,31 @@
     <style>
 
         th.header {
-            background-color: lightgray;
+            background-color: whitesmoke;
             text-align: center;
         }
 
         td.even {
-            background-color: chartreuse;
+            background-color: green;
             text-align: center;
         }
 
         td.odd {
-            background-color: cyan;
+            background-color: blue;
             text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <p> <a href="second_task.html">Druga Strona</a> </p>
+    <p> <a href="canva.html">Canva</a> </p>
     
-    <h1>Wpisz liczbę, aby wygenerować tabelę</h1>
     <form>
-        <label for="number">Wpisz liczbę z zakresu od 5 do 20:</label>
+        <label for="number">Podaj n (5<=n<=20):</label>
         <input type="number" id="number" name="number" value="value"><br>
     </form>
 
-    <button type="button" id="button">Generuj</button>
+    <button type="button" id="button">GO</button>
 
     <script>
         document.getElementById("button").addEventListener("click", function () {
@@ -38,23 +37,20 @@
 
             if (passedNumber < 5 || passedNumber > 20) {
                 var param = document.createElement("p");
-                param.innerText = "Podana wartość jest nieprawidłowa, dlatego przyjęto n=5";
+                param.innerText = "Podana wartość jest nieprawidłowa, dlatego przyjęto n=10";
                 document.body.appendChild(param);
-                passedNumber = 5;
+                passedNumber = 10;
             }
-
             const numbers = [];
-
-            generateNumbers();
-            generateTable();
-
-            function generateNumbers() {
+            createNumberList();
+            createTable();
+            function createNumberList() {
                 for (var i = 0; i < passedNumber; i++) {
                     numbers.push(Math.floor(Math.random() * 99) + 1);
                 }
             }
 
-            function generateTable() {
+            function createTable() {
                 var table = document.createElement("table");
                 document.body.appendChild(table);
 
