@@ -56,6 +56,12 @@
                     drawingContext.strokeStyle = '#33FFE3';
 
                     drawingContext.stroke();
+                    const midX = canvas.width / 2;
+                    drawingContext.beginPath();
+                    drawingContext.moveTo(midX, 0);
+                    drawingContext.lineTo(cursorX, cursorY);
+                    drawingContext.strokeStyle = '#000000'; 
+                    drawingContext.stroke();
 
                     drawingContext.beginPath();
                     drawingContext.moveTo(0, canvas.height);
