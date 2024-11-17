@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fri2ChYNmHbxaxupX+uAB0hTf3CL7swggjWVFbUmjz5yLegGRNJEICyz58IlL9UH3Bpxut4lI4BMxPnX4Jp/9w==",
+  "success": true,
+  "projectFilePath": "/home/coolka/projects/web/labnet/TestApp/TestApp.csproj",
+  "expectedPackageFiles": [
+    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
