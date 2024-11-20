@@ -13,22 +13,15 @@ namespace Lista6
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            (String imie, String nazwisko, int wiek, int placa) krotka = ("Ania", "Majka", 21, 0);
+            (String imie, String nazwisko, int wiek, int placa) krotka = ("Krzysztof", "Kulka", 21, 0);
             TestKrotki(krotka);
-
-            string @class = "class";
-
+            int @class = 365;
             Console.WriteLine($"wartość zmiennej class: {@class}");
-
             TestSystemArrays();
-
             TestAnonimowejKrotki();
-
             Console.WriteLine();
-
-            DrawCard("Ryszard", "Rys", paddingTop: 5, paddingBottom: 2);
-
-            CountMyTypes("abcdf, 1234, 23.34, 0, -123.5");
+            DrawCard("Krzychu", "Kula", 'O',paddingTop: 5, paddingBottom: 2);
+            CountMyTypes2("skibidi, 3.14, 23.34, 0, 5.78");
 
         }
 
@@ -43,33 +36,23 @@ namespace Lista6
 
         static void TestSystemArrays()
         {
-            int[] numbers = { 5, 2, 8, 1, 9, 4 };
-
+            int[] numbers = { 7, 0, 2, 1, 2, 5 };
             Console.WriteLine("Tablica przed sortowaniem: " + string.Join(", ", numbers));
-
             Array.Sort(numbers);
 
             Console.WriteLine("Posortowana tablica: " + string.Join(", ", numbers));
-
+            System.Console.WriteLine("Typ tablicy: " + numbers.GetType());
 
             string[] fruits = { "Apple", "Banana", "Orange", "Grapes" };
 
             Console.WriteLine("Tablica przed odwróceniem: " + string.Join(", ", fruits));
-
             Array.Reverse(fruits);
-
             Console.WriteLine("Tablica po odwróceniu: " + string.Join(", ", fruits));
 
-
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
-
             Console.WriteLine("Tablica: " + string.Join(", ", vowels));
-
             int indexOfI = Array.IndexOf(vowels, 'i');
-
             Console.WriteLine("Indeks elementu 'i': " + indexOfI);
-
-
             double[] prices = { 19.99, 29.99, 39.99, 49.99 };
 
             Console.WriteLine("Tablica: " + string.Join(", ", prices));
@@ -270,6 +253,36 @@ namespace Lista6
             Console.WriteLine($"Ilość liczb rzeczywistych: {licznikLiczbyPrzecinkowe}");
             Console.WriteLine($"Ilość napisów: {licznikNapisy}");
             Console.WriteLine($"Inne: {licznikInne}");
+        }
+        static void CountMyTypes2(string ciag){
+            string[] elementy = ciag.Split(',');
+            int licznikLiczbyCalkowite = 0;
+            int licznikLiczbyPrzecinkowe = 0;
+            int licznikNapisy = 0;
+            int licznikInne = 0;
+            foreach (var element in elementy)
+            {
+                string cleanedElement = element.Trim();
+                switch (GetElementType(cleanedElement))
+                {
+                    case ElementType.Integer:
+                        licznikLiczbyCalkowite++;
+                        break;
+                    case ElementType.Double:
+                        licznikLiczbyPrzecinkowe++;
+                        break;
+                    case ElementType.String:
+                        licznikNapisy++;
+                        break;
+                    default:
+                        licznikInne++;
+                        break;
+                }
+            }
+            Console.WriteLine($"NATURAL: {licznikLiczbyCalkowite}");
+            Console.WriteLine($"FLOAT: {licznikLiczbyPrzecinkowe}");
+            Console.WriteLine($"STRINGS: {licznikNapisy}");
+            Console.WriteLine($"OTHERS: {licznikInne}");
         }
         static ElementType GetElementType(string element)
         {
