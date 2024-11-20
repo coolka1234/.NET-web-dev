@@ -12,7 +12,7 @@ namespace Lista6
         
         static void Main(string[] args)
         {
-/*            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!");
             (String imie, String nazwisko, int wiek, int placa) krotka = ("Ania", "Majka", 21, 0);
             TestKrotki(krotka);
 
@@ -24,7 +24,7 @@ namespace Lista6
 
             TestAnonimowejKrotki();
 
-            Console.WriteLine();*/
+            Console.WriteLine();
 
             DrawCard("Ryszard", "Rys", paddingTop: 5, paddingBottom: 2);
 
