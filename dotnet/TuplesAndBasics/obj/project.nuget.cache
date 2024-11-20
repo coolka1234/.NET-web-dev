@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hpRg0mHLwQLs1qLXtTRldaL4m3qP5br+t6YdqccyOxGIV1XCduGLlU3z3eszks+pnJiH/i/N5ifBejrtNDFj2w==",
+  "success": true,
+  "projectFilePath": "/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/TuplesAndBasics.csproj",
+  "expectedPackageFiles": [
+    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

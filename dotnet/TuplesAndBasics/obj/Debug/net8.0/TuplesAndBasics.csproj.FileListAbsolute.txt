@@ -1,0 +1,15 @@
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/bin/Debug/net8.0/TuplesAndBasics
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/bin/Debug/net8.0/TuplesAndBasics.deps.json
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/bin/Debug/net8.0/TuplesAndBasics.runtimeconfig.json
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/bin/Debug/net8.0/TuplesAndBasics.dll
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/bin/Debug/net8.0/TuplesAndBasics.pdb
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.GeneratedMSBuildEditorConfig.editorconfig
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.AssemblyInfoInputs.cache
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.AssemblyInfo.cs
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.csproj.CoreCompileInputs.cache
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.sourcelink.json
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.dll
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/refint/TuplesAndBasics.dll
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.pdb
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/TuplesAndBasics.genruntimeconfig.cache
+/home/coolka/projects/web/labnet/dotnet/TuplesAndBasics/obj/Debug/net8.0/ref/TuplesAndBasics.dll
