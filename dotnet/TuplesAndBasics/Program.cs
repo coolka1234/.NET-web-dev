@@ -14,18 +14,19 @@ namespace Lista6
         {
             Console.WriteLine("Hello World!");
             (String imie, String nazwisko, int wiek, int placa) krotka = ("Krzysztof", "Kulka", 21, 0);
-            TestKrotki(krotka);
+            tuple(krotka);
             int @class = 365;
             Console.WriteLine($"wartość zmiennej class: {@class}");
             TestSystemArrays();
-            TestAnonimowejKrotki();
+            an_tuple();
             Console.WriteLine();
-            DrawCard("Krzychu", "Kula", 'O',paddingTop: 5, paddingBottom: 2);
+            DrawCard("Krzychu", "Kula", 'O',headerPadding: 5, lowerPadding: 2);
+            DrawCard();
             CountMyTypes2("skibidi, 3.14, 23.34, 0, 5.78");
 
         }
 
-        static void TestKrotki((String imie, String nazwisko, int wiek, int placa) tuple)
+        static void tuple((String imie, String nazwisko, int wiek, int placa) tuple)
         {
             var (imie, nazwisko, wiek, placa) = (tuple.imie, tuple.nazwisko, tuple.wiek, tuple.placa);
 
@@ -43,17 +44,16 @@ namespace Lista6
             Console.WriteLine("Posortowana tablica: " + string.Join(", ", numbers));
             System.Console.WriteLine("Typ tablicy: " + numbers.GetType());
 
-            string[] fruits = { "Apple", "Banana", "Orange", "Grapes" };
-
-            Console.WriteLine("Tablica przed odwróceniem: " + string.Join(", ", fruits));
-            Array.Reverse(fruits);
-            Console.WriteLine("Tablica po odwróceniu: " + string.Join(", ", fruits));
+            string[] animals = { "Cat", "Dog", "Maupa" };
+            Console.WriteLine("Tablica przed odwróceniem: " + string.Join(", ", animals));
+            Array.Reverse(animals);
+            Console.WriteLine("Tablica po odwróceniu: " + string.Join(", ", animals));
 
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
             Console.WriteLine("Tablica: " + string.Join(", ", vowels));
             int indexOfI = Array.IndexOf(vowels, 'i');
             Console.WriteLine("Indeks elementu 'i': " + indexOfI);
-            double[] prices = { 19.99, 29.99, 39.99, 49.99 };
+            double[] prices = { 21.37, 2.0, 13.13, 5.50 };
 
             Console.WriteLine("Tablica: " + string.Join(", ", prices));
 
@@ -73,14 +73,14 @@ namespace Lista6
             Console.WriteLine("Skopiowana tablica: " + string.Join(", ", destinationArray));
         }
 
-        static void TestAnonimowejKrotki()
+        static void an_tuple()
         {
-            var anonimowa = new { imie = "Ania", nazwisko = "Majka", wiek = 21, placa = 0 };
+            var anonimowa = new { imie = "Krzychu", nazwisko = "Kulcia", wiek = 21, placa = 99999 };
 
             Console.WriteLine($"imie: {anonimowa.imie}, nazwisko: {anonimowa.nazwisko}, wiek: {anonimowa.wiek}, placa: {anonimowa.placa}");
         }
 
-        static void DrawCard(String pierwszaLinia, String drugaLinia = "Kowalski", Char znak = 'X', int szerokoscObramowania = 2, int minSzerokoscCalosci = 20, int paddingTop = 1, int paddingBottom=1)
+        static void DrawCard(String pierwszaLinia="Janusz", String drugaLinia = "Kowalski", Char znak = 'X', int szer = 2, int minOverallWidth = 20, int headerPadding = 1, int lowerPadding = 1)
         {
             char[] pierwszaLiniaZeSpacjami = new char[pierwszaLinia.Length * 2 - 1];
             for (int i = 0; i < pierwszaLinia.Length; i++)
@@ -106,7 +106,7 @@ namespace Lista6
 
             drugaLinia = new string(drugaLiniaZeSpacjami);
 
-            int wolneMiejsce = minSzerokoscCalosci - (2 * szerokoscObramowania);
+            int wolneMiejsce = minOverallWidth - (2 * szer);
 
             int wolneMiejsce1 = wolneMiejsce - pierwszaLinia.Length;
 
@@ -115,18 +115,18 @@ namespace Lista6
             int[] miejsca = { wolneMiejsce1, wolneMiejsce2 };
             String[] linie = {pierwszaLinia, drugaLinia };
 
-            for (int i = 0; i < szerokoscObramowania; i++)
+            for (int i = 0; i < szer; i++)
             {
-                for (int j = 0; j < minSzerokoscCalosci; j++)
+                for (int j = 0; j < minOverallWidth; j++)
                 {
                     Console.Write(znak.ToString());
                 }
                 Console.Write("\n");
             }
 
-            for (int j=0; j<paddingTop;j++)
+            for (int j=0; j<headerPadding;j++)
             {
-                for (int i = 0; i < szerokoscObramowania; i++)
+                for (int i = 0; i < szer; i++)
                 {
                     Console.Write(znak.ToString());
                 }
@@ -136,7 +136,7 @@ namespace Lista6
                     Console.Write(" ");
                 }
 
-                for (int i = 0; i < szerokoscObramowania; i++)
+                for (int i = 0; i < szer; i++)
                 {
                     Console.Write(znak.ToString());
                 }
@@ -147,7 +147,7 @@ namespace Lista6
 
             for (int j=0;j<linie.Length;j++)
             {
-                for (int i = 0; i < szerokoscObramowania; i++)
+                for (int i = 0; i < szer; i++)
                 {
                     Console.Write(znak.ToString());
                 }
@@ -179,16 +179,16 @@ namespace Lista6
                     }
                 }
 
-                for (int i = 0; i < szerokoscObramowania; i++)
+                for (int i = 0; i < szer; i++)
                 {
                     Console.Write(znak.ToString());
                 }
                 Console.Write("\n");
             }
 
-            for (int j = 0; j < paddingBottom; j++)
+            for (int j = 0; j < lowerPadding; j++)
             {
-                for (int i = 0; i < szerokoscObramowania; i++)
+                for (int i = 0; i < szer; i++)
                 {
                     Console.Write(znak.ToString());
                 }
@@ -198,7 +198,7 @@ namespace Lista6
                     Console.Write(" ");
                 }
 
-                for (int i = 0; i < szerokoscObramowania; i++)
+                for (int i = 0; i < szer; i++)
                 {
                     Console.Write(znak.ToString());
                 }
@@ -206,9 +206,9 @@ namespace Lista6
                 Console.Write("\n");
             }
 
-            for (int i = 0; i < szerokoscObramowania; i++)
+            for (int i = 0; i < szer; i++)
             {
-                for (int j = 0; j < minSzerokoscCalosci; j++)
+                for (int j = 0; j < minOverallWidth; j++)
                 {
                     Console.Write(znak.ToString());
                 }
