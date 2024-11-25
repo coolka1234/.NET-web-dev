@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TuplesAndBasics")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23ea927114887e590b71ea55f17f30bbd8327a7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb10e7c2cd587520a182fa6e2de97f50d532cf90")]
 [assembly: System.Reflection.AssemblyProductAttribute("TuplesAndBasics")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TuplesAndBasics")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

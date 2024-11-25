@@ -20,7 +20,11 @@ namespace Lista6
             TestSystemArrays();
             an_tuple();
             Console.WriteLine();
-            DrawCard("Krzychu", "Kula", 'O',headerPadding: 5, lowerPadding: 2);
+            System.Console.WriteLine("With minimal padding:");
+            DrawCard3("Krzychu", "Kula", 'O', minimalHeight: 40, minOverallWidth: 200, szer: 10, headerPadding: 5, lowerPadding: 5);
+            System.Console.WriteLine("Without minimal padding:");
+            DrawCard("Krzychu", "Kula", 'O');
+            System.Console.WriteLine("\n");
             DrawCard();
             CountMyTypes2("skibidi, 3.14, 23.34, 0, 5.78");
 
@@ -40,7 +44,6 @@ namespace Lista6
             int[] numbers = { 7, 0, 2, 1, 2, 5 };
             Console.WriteLine("Tablica przed sortowaniem: " + string.Join(", ", numbers));
             Array.Sort(numbers);
-
             Console.WriteLine("Posortowana tablica: " + string.Join(", ", numbers));
             System.Console.WriteLine("Typ tablicy: " + numbers.GetType());
 
@@ -80,6 +83,162 @@ namespace Lista6
             Console.WriteLine($"imie: {anonimowa.imie}, nazwisko: {anonimowa.nazwisko}, wiek: {anonimowa.wiek}, placa: {anonimowa.placa}");
         }
 
+        static void DrawCard3(String pierwszaLinia="Janusz", String drugaLinia = "Kowalski", Char znak = 'X', int szer = 2, int minOverallWidth = 20, int headerPadding = 1, int lowerPadding = 1, int minimalHeight = 20)
+        {
+            int num_of_lines=(minimalHeight-headerPadding-lowerPadding-2)/2;
+            if (num_of_lines<1)
+            {
+                num_of_lines=1;
+            }
+            for(int i=0;i<num_of_lines;i++)
+            {
+                for(int j=0;j<minOverallWidth;j++)
+                {
+                    Console.Write(znak);
+                }
+                Console.Write("\n");
+            }
+            char[] pierwszaLiniaZeSpacjami = new char[pierwszaLinia.Length * 2 - 1];
+            for (int i = 0; i < pierwszaLinia.Length; i++)
+            {
+                pierwszaLiniaZeSpacjami[i * 2] = pierwszaLinia[i];
+                if (i < pierwszaLinia.Length - 1)
+                {
+                    pierwszaLiniaZeSpacjami[i * 2 + 1] = ' ';
+                }
+            }
+
+            pierwszaLinia = new String(pierwszaLiniaZeSpacjami);
+
+            char[] drugaLiniaZeSpacjami = new char[drugaLinia.Length * 2 - 1];
+            for (int i = 0; i < drugaLinia.Length; i++)
+            {
+                drugaLiniaZeSpacjami[i * 2] = drugaLinia[i];
+                if (i < drugaLinia.Length - 1)
+                {
+                    drugaLiniaZeSpacjami[i * 2 + 1] = ' ';
+                }
+            }
+
+            drugaLinia = new string(drugaLiniaZeSpacjami);
+
+            int wolneMiejsce = minOverallWidth - (2 * szer);
+
+            int wolneMiejsce1 = wolneMiejsce - pierwszaLinia.Length;
+
+            int wolneMiejsce2 = wolneMiejsce - drugaLinia.Length;
+
+            int[] miejsca = { wolneMiejsce1, wolneMiejsce2 };
+            String[] linie = {pierwszaLinia, drugaLinia };
+
+            for (int i = 0; i < szer; i++)
+            {
+                for (int j = 0; j < minOverallWidth; j++)
+                {
+                    Console.Write(znak.ToString());
+                }
+                Console.Write("\n");
+            }
+
+            for (int j=0; j<headerPadding;j++)
+            {
+                for (int i = 0; i < szer; i++)
+                {
+                    Console.Write(znak.ToString());
+                }
+
+                for (int i = 0; i < wolneMiejsce; i++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int i = 0; i < szer; i++)
+                {
+                    Console.Write(znak.ToString());
+                }
+
+                Console.Write("\n");
+            }
+            
+
+            for (int j=0;j<linie.Length;j++)
+            {
+                for (int i = 0; i < szer; i++)
+                {
+                    Console.Write(znak.ToString());
+                }
+
+                if (miejsca[j] % 2 == 0)
+                {
+                    for (int i = 0; i < miejsca[j] / 2; i++)
+                    {
+                        Console.Write(" ");
+                    }
+                    
+                    Console.Write(linie[j]);
+
+                    for (int i = 0; i < miejsca[j] / 2; i++)
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < (miejsca[j] / 2) + 1; i++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.Write(linie[j]);
+                    for (int i = 0; i < miejsca[j] / 2; i++)
+                    {
+                        Console.Write(" ");
+                    }
+                }
+
+                for (int i = 0; i < szer; i++)
+                {
+                    Console.Write(znak.ToString());
+                }
+                Console.Write("\n");
+            }
+
+            for (int j = 0; j < lowerPadding; j++)
+            {
+                for (int i = 0; i < szer; i++)
+                {
+                    Console.Write(znak.ToString());
+                }
+
+                for (int i = 0; i < wolneMiejsce; i++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int i = 0; i < szer; i++)
+                {
+                    Console.Write(znak.ToString());
+                }
+
+                Console.Write("\n");
+            }
+
+            for (int i = 0; i < szer; i++)
+            {
+                for (int j = 0; j < minOverallWidth; j++)
+                {
+                    Console.Write(znak.ToString());
+                }
+                Console.Write("\n");
+            }
+            for(int i=0;i<num_of_lines;i++)
+            {
+                for(int j=0;j<minOverallWidth;j++)
+                {
+                    Console.Write(znak);
+                }
+                Console.Write("\n");
+            }
+        }
         static void DrawCard(String pierwszaLinia="Janusz", String drugaLinia = "Kowalski", Char znak = 'X', int szer = 2, int minOverallWidth = 20, int headerPadding = 1, int lowerPadding = 1)
         {
             char[] pierwszaLiniaZeSpacjami = new char[pierwszaLinia.Length * 2 - 1];
