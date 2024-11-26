@@ -1,0 +1,16 @@
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/bin/Debug/net5.0/Lista5
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/bin/Debug/net5.0/Lista5.deps.json
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/bin/Debug/net5.0/Lista5.runtimeconfig.json
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/bin/Debug/net5.0/Lista5.runtimeconfig.dev.json
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/bin/Debug/net5.0/Lista5.dll
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/bin/Debug/net5.0/Lista5.pdb
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.GeneratedMSBuildEditorConfig.editorconfig
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.AssemblyInfoInputs.cache
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.AssemblyInfo.cs
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.csproj.CoreCompileInputs.cache
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.sourcelink.json
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.dll
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/refint/Lista5.dll
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.pdb
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/Lista5.genruntimeconfig.cache
+/home/coolka/projects/web/labnet/dotnet/Lab05-VSC/Lista5/Lista5/obj/Debug/net5.0/ref/Lista5.dll

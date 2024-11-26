@@ -1,0 +1,15 @@
+/home/coolka/projects/web/labnet/dotnet/Polynomial/bin/Debug/net8.0/Polynomial
+/home/coolka/projects/web/labnet/dotnet/Polynomial/bin/Debug/net8.0/Polynomial.deps.json
+/home/coolka/projects/web/labnet/dotnet/Polynomial/bin/Debug/net8.0/Polynomial.runtimeconfig.json
+/home/coolka/projects/web/labnet/dotnet/Polynomial/bin/Debug/net8.0/Polynomial.dll
+/home/coolka/projects/web/labnet/dotnet/Polynomial/bin/Debug/net8.0/Polynomial.pdb
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.GeneratedMSBuildEditorConfig.editorconfig
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.AssemblyInfoInputs.cache
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.AssemblyInfo.cs
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.csproj.CoreCompileInputs.cache
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.sourcelink.json
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.dll
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/refint/Polynomial.dll
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.pdb
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/Polynomial.genruntimeconfig.cache
+/home/coolka/projects/web/labnet/dotnet/Polynomial/obj/Debug/net8.0/ref/Polynomial.dll

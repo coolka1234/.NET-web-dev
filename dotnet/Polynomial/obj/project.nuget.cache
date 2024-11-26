@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nWzZEid/yahvcrBNRkvhd+WxPfk5cgdVysz0ltddO9LRjqjcxZ5ZPVeN9w6Sq+EhT4XuAKfosfsilWxhlNuLiw==",
+  "success": true,
+  "projectFilePath": "/home/coolka/projects/web/labnet/dotnet/Polynomial/Polynomial.csproj",
+  "expectedPackageFiles": [
+    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
