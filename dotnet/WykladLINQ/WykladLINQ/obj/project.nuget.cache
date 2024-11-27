@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zLj/PITTeQuTd9I5btP2reCBrm1mNUeCRiuYikogERAKn/EAdgZYGgQSKdjqk0r1XgNeAV6DNJ86uC+/Z4vRaA==",
+  "dgSpecHash": "NuxwzKXYDpc9rkQ1tafztXwh3BjUhh0xV5Rrmol36HJYHTaofC9BfEuMS5/KU3ZYaeUv7+EUe0MWmecVIGHGFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ania\\Desktop\\WykladLINQ\\WykladLINQ\\WykladLINQ.csproj",
+  "projectFilePath": "/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/WykladLINQ.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ania\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Ania\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Ania\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Ania\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+    "/home/coolka/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/home/coolka/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.32/microsoft.netcore.app.host.linux-x64.3.1.32.nupkg.sha512"
   ],
   "logs": []
 }

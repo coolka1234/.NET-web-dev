@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bb9O2JXr1+AjUw/9JTGuVWfsYVqaAADNxL3WPKrILivy+NuN0COM8cbHlvTVNCkL0HsWLErfwJEOEImvKqBMMA==",
+  "success": true,
+  "projectFilePath": "/home/coolka/projects/web/labnet/dotnet/SortingReflections/SortingReflections.csproj",
+  "expectedPackageFiles": [
+    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

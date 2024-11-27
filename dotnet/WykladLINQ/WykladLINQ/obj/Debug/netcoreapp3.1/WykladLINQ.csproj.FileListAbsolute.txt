@@ -1,0 +1,14 @@
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/bin/Debug/netcoreapp3.1/WykladLINQ
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/bin/Debug/netcoreapp3.1/WykladLINQ.deps.json
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/bin/Debug/netcoreapp3.1/WykladLINQ.runtimeconfig.json
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/bin/Debug/netcoreapp3.1/WykladLINQ.runtimeconfig.dev.json
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/bin/Debug/netcoreapp3.1/WykladLINQ.dll
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/bin/Debug/netcoreapp3.1/WykladLINQ.pdb
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.GeneratedMSBuildEditorConfig.editorconfig
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.AssemblyInfoInputs.cache
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.AssemblyInfo.cs
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.csproj.CoreCompileInputs.cache
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.sourcelink.json
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.dll
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.pdb
+/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/Debug/netcoreapp3.1/WykladLINQ.genruntimeconfig.cache

@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    "net8.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    "net8.0": []
   },
   "packageFolders": {
     "/home/coolka/.nuget/packages/": {}
@@ -13,24 +13,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/WykladLINQ.csproj",
-      "projectName": "WykladLINQ",
-      "projectPath": "/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/WykladLINQ.csproj",
+      "projectUniqueName": "/home/coolka/projects/web/labnet/dotnet/SortingReflections/SortingReflections.csproj",
+      "projectName": "SortingReflections",
+      "projectPath": "/home/coolka/projects/web/labnet/dotnet/SortingReflections/SortingReflections.csproj",
       "packagesPath": "/home/coolka/.nuget/packages/",
-      "outputPath": "/home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/obj/",
+      "outputPath": "/home/coolka/projects/web/labnet/dotnet/SortingReflections/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/coolka/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -41,8 +41,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "imports": [
           "net461",
           "net462",
@@ -57,15 +57,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[3.1.32, 3.1.32]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
+            "version": "[8.0.10, 8.0.10]"
           }
         ],
         "frameworkReferences": {
@@ -73,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

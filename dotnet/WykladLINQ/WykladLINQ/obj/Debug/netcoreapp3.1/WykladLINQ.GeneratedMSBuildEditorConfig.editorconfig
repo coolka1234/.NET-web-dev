@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = WykladLINQ
-build_property.ProjectDir = C:\Users\Ania\Desktop\WykladLINQ\WykladLINQ\
+build_property.ProjectDir = /home/coolka/projects/web/labnet/dotnet/WykladLINQ/WykladLINQ/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

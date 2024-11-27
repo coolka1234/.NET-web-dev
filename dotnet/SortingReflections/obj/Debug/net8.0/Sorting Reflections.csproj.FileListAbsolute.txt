@@ -1,0 +1,5 @@
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/obj/Debug/net8.0/Sorting Reflections.GeneratedMSBuildEditorConfig.editorconfig
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/obj/Debug/net8.0/Sorting Reflections.AssemblyInfoInputs.cache
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/obj/Debug/net8.0/Sorting Reflections.AssemblyInfo.cs
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/obj/Debug/net8.0/Sorting Reflections.csproj.CoreCompileInputs.cache
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/obj/Debug/net8.0/Sorting Reflections.sourcelink.json
