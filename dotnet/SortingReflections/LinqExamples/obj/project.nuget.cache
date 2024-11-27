@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "44Rl61i5csemzks1TQ11ENaUbUEfdKXufe08iRfMSPSj1fM7t6n1l1k8iCWRoxnLw8QmzaRcsAA2quz9fP/x0A==",
+  "success": true,
+  "projectFilePath": "/home/coolka/projects/web/labnet/dotnet/SortingReflections/LinqExamples/LinqExamples.csproj",
+  "expectedPackageFiles": [
+    "/home/coolka/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/home/coolka/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.32/microsoft.netcore.app.host.linux-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

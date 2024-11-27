@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = LinqExamples
+build_property.ProjectDir = /home/coolka/projects/web/labnet/dotnet/SortingReflections/LinqExamples/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
