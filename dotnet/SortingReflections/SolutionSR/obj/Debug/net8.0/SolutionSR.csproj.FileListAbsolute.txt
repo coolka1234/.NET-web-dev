@@ -1,0 +1,15 @@
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/bin/Debug/net8.0/SolutionSR
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/bin/Debug/net8.0/SolutionSR.deps.json
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/bin/Debug/net8.0/SolutionSR.runtimeconfig.json
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/bin/Debug/net8.0/SolutionSR.dll
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/bin/Debug/net8.0/SolutionSR.pdb
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.GeneratedMSBuildEditorConfig.editorconfig
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.AssemblyInfoInputs.cache
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.AssemblyInfo.cs
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.csproj.CoreCompileInputs.cache
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.sourcelink.json
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.dll
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/refint/SolutionSR.dll
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.pdb
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/SolutionSR.genruntimeconfig.cache
+/home/coolka/projects/web/labnet/dotnet/SortingReflections/SolutionSR/obj/Debug/net8.0/ref/SolutionSR.dll
