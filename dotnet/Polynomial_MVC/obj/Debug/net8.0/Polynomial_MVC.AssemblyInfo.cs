@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Polynomial_MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa5fcdc9de24d774f669c3a50a06f60a76028be4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cd513da51ffd35fc6bf05068253a4361409c2c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Polynomial_MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Polynomial_MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
