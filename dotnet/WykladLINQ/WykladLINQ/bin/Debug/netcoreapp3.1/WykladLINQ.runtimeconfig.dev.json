@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/home/coolka/.dotnet/store/|arch|/|tfm|",
-      "/home/coolka/.nuget/packages"
-    ]
-  }
-}
