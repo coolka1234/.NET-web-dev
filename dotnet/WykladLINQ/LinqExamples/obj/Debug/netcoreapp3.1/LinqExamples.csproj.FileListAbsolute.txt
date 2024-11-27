@@ -1,0 +1,13 @@
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\bin\Debug\netcoreapp3.1\LinqExamples.exe
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\bin\Debug\netcoreapp3.1\LinqExamples.deps.json
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\bin\Debug\netcoreapp3.1\LinqExamples.runtimeconfig.json
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\bin\Debug\netcoreapp3.1\LinqExamples.runtimeconfig.dev.json
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\bin\Debug\netcoreapp3.1\LinqExamples.dll
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\bin\Debug\netcoreapp3.1\LinqExamples.pdb
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\obj\Debug\netcoreapp3.1\LinqExamples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\obj\Debug\netcoreapp3.1\LinqExamples.AssemblyInfoInputs.cache
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\obj\Debug\netcoreapp3.1\LinqExamples.AssemblyInfo.cs
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\obj\Debug\netcoreapp3.1\LinqExamples.csproj.CoreCompileInputs.cache
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\obj\Debug\netcoreapp3.1\LinqExamples.dll
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\obj\Debug\netcoreapp3.1\LinqExamples.pdb
+C:\Users\Ania\Desktop\WykladLINQ\LinqExamples\obj\Debug\netcoreapp3.1\LinqExamples.genruntimeconfig.cache
