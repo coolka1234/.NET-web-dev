@@ -243,9 +243,9 @@ namespace LinqExamples
             var resMax = ints.Where(x => x % 2 == 0).Max();
             Console.WriteLine(resMin);
             var strs = Generator.GenerateNamesEasy();
-            var resStrMin1 = strs.Min(); //dictionaryOrder
+            var resStrMin1 = strs.Min(); 
             Console.WriteLine(resStrMin1);
-            var resStrMin2 = strs.Min(s=>s.Length); // minimum length
+            var resStrMin2 = strs.Min(s=>s.Length); 
             Console.WriteLine(resStrMin2);
         }
 
@@ -396,7 +396,6 @@ namespace LinqExamples
             var resStud = Generator.GenerateStudentsWithTopicsEasy()
                .Skip(4).Take(5);
             resStud.ToList().ForEach(Console.WriteLine);
-            //no version for Query expression
         }
 
         public static void TestTakeWhileAndSkipWhile()
@@ -408,7 +407,6 @@ namespace LinqExamples
                .SkipWhile(s =>!s.Active)
                .TakeWhile(s=>s.Active);
             resStud.ToList().ForEach(Console.WriteLine);
-            //no version for Query expression
         }
 
         public static void TestLazyExecution()
@@ -735,28 +733,6 @@ namespace LinqExamples
 
         static void groupStudents(int n)
         {
-            /*var groupedAndSortedStudents = from student in Generator.GenerateStudentsWithTopicsEasy()
-                                           orderby student.Name, student.Index
-                                           group student by student.Name into studentGroup
-                                           select studentGroup.Take(n).ToList();*/
-
-
-            /*var students = Generator.GenerateStudentsWithTopicsEasy();
-
-            var groupedAndSortedStudents = from student in Generator.GenerateStudentsWithTopicsEasy()
-                                           orderby student.Name, student.Index
-                                           let index = students.IndexOf(student)
-                                           group student by index / n;*/
-
-
-            /*var i = 0;
-            var groupedAndSortedStudents = from student in Generator.GenerateStudentsWithTopicsEasy()
-                                           orderby student.Name, student.Index
-                                           select new { groupNumber = i / n, i=i+1}
-                                           group student by student.groupNumber into studentGroup;
-
-
-*/
             var students = Generator.GenerateStudentsWithTopicsEasy();
 
             var sortedStudents = students
