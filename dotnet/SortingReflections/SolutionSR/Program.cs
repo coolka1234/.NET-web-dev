@@ -63,6 +63,7 @@ namespace LinqExamples
             return result;
         }
     }
+    //topiczek
 
     public class Topic
     {
@@ -110,9 +111,9 @@ namespace LinqExamples
     //klasa do zad4
     public class MyClass
     {
-        public int AddNumbers(int a, int b)
+        public int mulNums(int a, int b)
         {
-            return a + b;
+            return a * b;
         }
     }
 
@@ -120,7 +121,7 @@ namespace LinqExamples
     {
         public static int[] GenerateIntsEasy()
         {
-            return new int[] { 4, 7, 1, 3, 2, 9, 5, 6, 8 };
+            return [4, 7, 1, 3, 2, 9, 5, 6, 8];
         }
 
         public static int[] GenerateIntsMany()
@@ -169,7 +170,7 @@ namespace LinqExamples
             new StudentWithTopics(15, 44000, "Lewandowski", Gender.Male, true,3,
                     new List<string>{"Neural Networks","First Touch"}),
             new StudentWithTopics(16, 32000, "Krawiec", Gender.Male, true,2,
-                    new List<string>{"algorithms","web programming"}),
+                    new List<string>{"algorithms","Web programming"}),
             };
         }
 
@@ -179,14 +180,14 @@ namespace LinqExamples
             {
                 new Topic(1, "C#"),
                 new Topic(2, "Java"),
-                new Topic(3, "JavaScript"),
+                new Topic(3, "JS"),
                 new Topic(4, "C++"),
-                new Topic(5, "Python"),
-                new Topic(6, "Basic"),
-                new Topic(7, "fuzzy logic"),
-                new Topic(8, "neural networks"),
-                new Topic(9, "web programming"),
-                new Topic(10, "algorithms"),
+                new Topic(5, "Scala"),
+                new Topic(6, "Web programming"),
+                new Topic(7, "SQL"),
+                new Topic(8, "AI"),
+                new Topic(9, "Web programming"),
+                new Topic(10, "AiSD"),
 
             };
         }
@@ -862,11 +863,11 @@ namespace LinqExamples
 
         static void ReflectionMechanism()
         {
-            MyClass myObject = new MyClass();
+            MyClass newObject = new MyClass();
 
-            object ?obj = myObject;
+            object ?obj = newObject;
 
-            MethodInfo ?methodInfo = obj.GetType().GetMethod("AddNumbers");
+            MethodInfo ?methodInfo = obj.GetType().GetMethod("mulNums");
 
             object[] parameters = { 100, 200 };
             #pragma warning disable
@@ -875,9 +876,9 @@ namespace LinqExamples
 
             Console.WriteLine($"Wynik invoka: {result}");
 
-            object ?resultStoredInObject = result;
+            object ?objResult = result;
 
-            Console.WriteLine($"Wynik w obiekcie: {resultStoredInObject}");
+            Console.WriteLine($"Wynik w obiekcie: {objResult}");
 
         }
     //     static void extraTask()
