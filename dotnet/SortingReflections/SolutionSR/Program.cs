@@ -120,7 +120,7 @@ namespace LinqExamples
     {
         public static int[] GenerateIntsEasy()
         {
-            return new int[] { 5, 3, 9, 7, 1, 2, 6, 7, 8 };
+            return new int[] { 4, 7, 1, 3, 2, 9, 5, 6, 8 };
         }
 
         public static int[] GenerateIntsMany()
@@ -135,15 +135,15 @@ namespace LinqExamples
         public static List<string> GenerateNamesEasy()
         {
             return new List<string>() {
-                "Nowak",
-                "Kowalski",
-                "Schmidt",
-                "Newman",
-                "Bandingo",
-                "Miniwiliger"
+                "Kajza",
+                "Schreiber",
+                "Mercury",
+                "Skarżyński",
+                "Nostramus",
+                "Wysocki"
             };
         }
-        public static List<StudentWithTopics> GenerateStudentsWithTopicsEasy()
+        public static List<StudentWithTopics> StudentsReady()
         {
             return new List<StudentWithTopics>() {
             new StudentWithTopics(1,19345,"Skarżyńska", Gender.Female,true,1,
@@ -209,7 +209,7 @@ namespace LinqExamples
         {
             Generator.GenerateIntsEasy().ToList().ForEach(Console.WriteLine);
             Generator.GenerateDepartmentsEasy().ForEach(Console.WriteLine);
-            Generator.GenerateStudentsWithTopicsEasy().ForEach(Console.WriteLine);
+            Generator.StudentsReady().ForEach(Console.WriteLine);
         }
 
         public static void MethodWhereSimple()
@@ -218,7 +218,7 @@ namespace LinqExamples
             resInt.ToList().ForEach(Console.WriteLine);
             var resStr = Generator.GenerateNamesEasy().Where(s => s.Length>6);
             resStr.ToList().ForEach(Console.WriteLine);
-            var resStud = Generator.GenerateStudentsWithTopicsEasy().Where(s => s.Active && s.DepartmentId==1);
+            var resStud = Generator.StudentsReady().Where(s => s.Active && s.DepartmentId==1);
             resStud.ToList().ForEach(Console.WriteLine);
         }
         public static void ClauseWhereSimple()
@@ -231,7 +231,7 @@ namespace LinqExamples
                          where s.Length > 6
                          select s;
             resStr.ToList().ForEach(Console.WriteLine);
-            var resStud = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = from s in Generator.StudentsReady()
                           where s.Active && s.DepartmentId == 1
                           select s;
             resStud.ToList().ForEach(Console.WriteLine);
@@ -282,11 +282,11 @@ namespace LinqExamples
             var resStr = Generator.GenerateNamesEasy()
                 .Where((s,pos) => pos % 2==0);
             resStr.ToList().ForEach(Console.WriteLine);
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                 .Where((s, pos) => s.Active && pos % 3 == 0 );
             resStud.ToList().ForEach(Console.WriteLine);
             Console.WriteLine("--------");
-            var resStud2 = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud2 = Generator.StudentsReady()
                 .Where(s=>s.Active)               
                 .Where((s, pos) => pos % 3 == 0);
             resStud2.ToList().ForEach(Console.WriteLine);
@@ -294,7 +294,7 @@ namespace LinqExamples
 
         public static void TestSelect()
         {
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                 .Where(s => s.Index < 20000)
                 .Select(s => new { Header=s.Id + ") "+s.Index, s.Name });
             foreach(var x in resStud)
@@ -302,7 +302,7 @@ namespace LinqExamples
                 Console.WriteLine($" {x.Header} =====> {x.Name}");
             }
             Console.WriteLine("-------------");
-            var resStud2 = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud2 = from s in Generator.StudentsReady()
                            where s.Index < 20000
                            select new { Header = s.Id + ") " + s.Index, s.Name };
             foreach (var x in resStud2)
@@ -310,7 +310,7 @@ namespace LinqExamples
                 Console.WriteLine($" {x.Header} =====> {x.Name}");
             }
             Console.WriteLine("-------------");
-            var resStud3 = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud3 = from s in Generator.StudentsReady()
                            where s.Index < 20000
                            select (Header : s.Id + ") " + s.Index, s.Name);
             foreach (var x in resStud3)
@@ -321,7 +321,7 @@ namespace LinqExamples
 
         public static void TestSelectMany()
         {
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                 .Where(s => s.Index < 20000)
                 .SelectMany(s => s.Topics);
             resStud.ToList().ForEach(x => Console.Write(x + ";"));
@@ -336,7 +336,7 @@ namespace LinqExamples
 
         public static void TestSelectManyQuery()
         {
-            var resStud = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = from s in Generator.StudentsReady()
                           where s.Index < 20000
                           from topic in s.Topics
                           select topic;
@@ -353,12 +353,12 @@ namespace LinqExamples
 
         public static void TestSelectManyWith2Lambdas()
         {
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                 .Where(s => s.Index < 20000 && s.Name.Length <= 6)
                 .SelectMany(s => s.Topics,(stud,topic)=> new { stud.Name, topic });
             resStud.ToList().ForEach(Console.WriteLine);
             Console.WriteLine("----------------");
-            var resStud2 = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud2 = from s in Generator.StudentsReady()
                           where s.Index < 20000 && s.Name.Length <= 6
                           from topic in s.Topics
                           select new { s.Name, topic };
@@ -367,12 +367,12 @@ namespace LinqExamples
         public static void TestOrderBy()
         {
 
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                 .OrderBy(s => s.Name)
                 .ThenByDescending(s => s.Index);
             resStud.ToList().ForEach(Console.WriteLine);
             Console.WriteLine("----------------");
-            var resStud2 = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud2 = from s in Generator.StudentsReady()
                            orderby s.Name, s.Index descending
                            select s;
             resStud2.ToList().ForEach(Console.WriteLine);
@@ -380,6 +380,7 @@ namespace LinqExamples
 
         class MyComparer : IComparer<string>
         {
+            #pragma warning disable
             int IComparer<string>.Compare(string x, string y)
             {
                 return x.Length-y.Length;
@@ -387,7 +388,7 @@ namespace LinqExamples
         }
         public static void TestOrderByWithComparer()
         {
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                 .OrderBy(s => s.Name, new MyComparer());
             resStud.ToList().ForEach(Console.WriteLine);
             //no version for Query expression
@@ -395,16 +396,16 @@ namespace LinqExamples
 
         public static void TestTakeAndSkip()
         {
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                .Skip(4).Take(5);
             resStud.ToList().ForEach(Console.WriteLine);
         }
 
         public static void TestTakeWhileAndSkipWhile()
         {
-            Generator.GenerateStudentsWithTopicsEasy().ToList().ForEach(Console.WriteLine);
+            Generator.StudentsReady().ToList().ForEach(Console.WriteLine);
             Console.WriteLine("------------");
-            var resStud = Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = Generator.StudentsReady()
                .SkipWhile(s=>s.Active)
                .SkipWhile(s =>!s.Active)
                .TakeWhile(s=>s.Active);
@@ -413,7 +414,7 @@ namespace LinqExamples
 
         public static void TestLazyExecution()
         {
-            var studs = Generator.GenerateStudentsWithTopicsEasy();
+            var studs = Generator.StudentsReady();
             var resStud = from s in studs
                           where s.Index < 20000 && s.Name.Length <= 6
                           select s;
@@ -436,11 +437,11 @@ namespace LinqExamples
 
         public static void TestToDictionaryAndToLookup()
         {
-            var resStud = Generator.GenerateStudentsWithTopicsEasy().ToDictionary(s=>s.Index, s=>s.Name);
+            var resStud = Generator.StudentsReady().ToDictionary(s=>s.Index, s=>s.Name);
             resStud.ToList().ForEach(s => Console.WriteLine(s.Key+"-->"+s.Value));
 
             Console.WriteLine("---------------");
-            var resStud2 = Generator.GenerateStudentsWithTopicsEasy().ToLookup(s => s.Name);
+            var resStud2 = Generator.StudentsReady().ToLookup(s => s.Name);
             foreach(var dept in resStud2)
             {
                 Console.WriteLine(dept.Key);
@@ -450,7 +451,7 @@ namespace LinqExamples
 
         public static void TestGroupBy()
         {
-            var resStud = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = from s in Generator.StudentsReady()
                           group s by s.DepartmentId;
 
             foreach (var dept in resStud)
@@ -463,7 +464,7 @@ namespace LinqExamples
 
         public static void TestGroupByComplex()
         {
-            var resStud = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud = from s in Generator.StudentsReady()
                           group s by new { s.Active, s.Gender } into sGroup
                           orderby sGroup.Key.Active,sGroup.Key.Gender
                           select new
@@ -483,7 +484,7 @@ namespace LinqExamples
         public static void TestGroupJoin()
         {
             var resStud = Generator.GenerateDepartmentsEasy()
-                .GroupJoin(Generator.GenerateStudentsWithTopicsEasy(),
+                .GroupJoin(Generator.StudentsReady(),
                         dept => dept.Id,
                         stud => stud.DepartmentId,
                         (department, students) => new
@@ -500,7 +501,7 @@ namespace LinqExamples
             }
             Console.WriteLine("------------");
             var resStud2 = from d in Generator.GenerateDepartmentsEasy()
-                           join s in Generator.GenerateStudentsWithTopicsEasy()
+                           join s in Generator.StudentsReady()
                            on d.Id equals s.DepartmentId into dGroup
                            select new
                            {
@@ -520,7 +521,7 @@ namespace LinqExamples
         public static void TestJoinSpecial()
         {
             var resStud = Generator.GenerateDepartmentsEasy()
-                        .Join(Generator.GenerateStudentsWithTopicsEasy(),
+                        .Join(Generator.StudentsReady(),
                         dept => dept.Id,
                         stud => stud.DepartmentId,
                         (department, student) => new
@@ -557,7 +558,7 @@ namespace LinqExamples
 
         public static void TestJoin()
         {
-            var studs = Generator.GenerateStudentsWithTopicsEasy();
+            var studs = Generator.StudentsReady();
             // there are no 6 department
             studs.Add(new StudentWithTopics(30, 15000, "Wuc", Gender.Male, true, 6,
                             new List<string> { "C#", "Java", "algorithms" }));
@@ -577,7 +578,7 @@ namespace LinqExamples
                 Console.WriteLine($"{elem.DepartmentName} -> {elem.StudentName}");
             }
             Console.WriteLine("------------");
-            var resStud2 = from s in Generator.GenerateStudentsWithTopicsEasy()
+            var resStud2 = from s in Generator.StudentsReady()
                            join d in Generator.GenerateDepartmentsEasy()
                            on s.DepartmentId equals d.Id
                            select new
@@ -624,6 +625,7 @@ namespace LinqExamples
 
         class Comp : IEqualityComparer<StudentWithTopics>
         {
+            #pragma warning disable
             public bool Equals(StudentWithTopics x, StudentWithTopics y)
             {
                 return x.Id == x.Id;
@@ -636,7 +638,7 @@ namespace LinqExamples
         }
         public static void TestDistinc()
         {
-            var set1 = Generator.GenerateStudentsWithTopicsEasy()
+            var set1 = Generator.StudentsReady()
                        .Where(s => s.Id >= 0 && s.Id <=2)
                        .ToList();
             set1.Add(new StudentWithTopics(1, 12345, "Nowak", Gender.Female, true, 1,
@@ -649,9 +651,9 @@ namespace LinqExamples
 
         public static void TestUnion()
         {
-            var set1 = Generator.GenerateStudentsWithTopicsEasy()
+            var set1 = Generator.StudentsReady()
                        .Where(s => s.Id >= 1 && s.Id <= 4);
-            var set2 = Generator.GenerateStudentsWithTopicsEasy()
+            var set2 = Generator.StudentsReady()
                        .Where(s => s.Id >= 3 && s.Id <= 6);
             set1.Union(set2).ToList().ForEach(Console.WriteLine);
             Console.WriteLine("----------------");
@@ -660,14 +662,14 @@ namespace LinqExamples
 
         public static void TestUnionAnnonymous()
         {
-            var set1 = Generator.GenerateStudentsWithTopicsEasy()
+            var set1 = Generator.StudentsReady()
                        .Where(s => s.Id >= 1 && s.Id <= 4)
                        .Select( s=>new
                        {
                            s.Id, s.Index, s.Name
                        }
                        );
-            var set2 = Generator.GenerateStudentsWithTopicsEasy()
+            var set2 = Generator.StudentsReady()
                        .Where(s => s.Id >= 3 && s.Id <= 6)
                        .Select(s => new
                         {
@@ -725,9 +727,10 @@ namespace LinqExamples
 
 
 
-            groupStudents(5);
+            groupStudents(4);
             sortTopicsByFreq();
             sortTopicsByFreqAndGender();
+            sortTopicsByFreqAndLastLetterOfName();
             transformStudents();
             ReflectionMechanism();
         }
@@ -735,7 +738,7 @@ namespace LinqExamples
 //zad1
         static void groupStudents(int n)
         {
-            var students = Generator.GenerateStudentsWithTopicsEasy();
+            var students = Generator.StudentsReady();
 
             var sortedStudents = students
                 .OrderBy(s => s.Name)
@@ -745,11 +748,13 @@ namespace LinqExamples
                                   let index = sortedStudents.IndexOf(student)
                                   group student by index / n;
 
-            var groupedStudents2 = Generator.GenerateStudentsWithTopicsEasy()
+            var groupedStudents2 = Generator.StudentsReady()
                         .OrderBy(s => s.Name)
                         .ThenBy(s => s.Index)
                         .Select((student, index) => (Student: student, Group: index / n))
                         .GroupBy(studentGroup => studentGroup.Group);
+
+            // var len=groupedStudents2.Length;
 
             foreach (var group in groupedStudents2)
              {
@@ -767,7 +772,7 @@ namespace LinqExamples
         //zad2a
         static void sortTopicsByFreq()
         {
-            var topicsFrequency = Generator.GenerateStudentsWithTopicsEasy()
+            var topicsFrequency = Generator.StudentsReady()
                 .SelectMany(student => student.Topics)
                 .GroupBy(topic => topic)
                 .OrderByDescending(group => group.Count())
@@ -780,10 +785,10 @@ namespace LinqExamples
                 Console.WriteLine($"Topic: {topic.Topic}, Frequency: {topic.Frequency}");
             }
         }
-//zad2b
+        //zad2b
         static void sortTopicsByFreqAndGender()
         {
-            var topicsFrequencyByGender = Generator.GenerateStudentsWithTopicsEasy()
+            var topicsFrequencyByGender = Generator.StudentsReady()
         .GroupBy(student => student.Gender)
         .SelectMany(group => group
         .SelectMany(student => student.Topics)
@@ -800,11 +805,29 @@ namespace LinqExamples
                 Console.WriteLine($"Gender: {topic.Gender}, Topic: {topic.Topic}, Frequency: {topic.Frequency}");
             }
         }
+        static void sortTopicsByFreqAndLastLetterOfName()
+        {
+            var topicsFrequencyByLastLetter = Generator.StudentsReady()
+                .GroupBy(student => student.Name[^1])
+                .SelectMany(group => group
+                    .SelectMany(student => student.Topics)
+                    .GroupBy(topic => topic)
+                    .OrderByDescending(subgroup => subgroup.Count())
+                    .Select(subgroup => new { LastLetter = group.Key, Topic = subgroup.Key, Frequency = subgroup.Count() })
+                )
+                .ToList();
 
-//zad3
+            Console.WriteLine("Posortowane topici przez freq i ostatnią literę imienia:");
+            foreach (var topic in topicsFrequencyByLastLetter)
+            {
+                Console.WriteLine($"Last Letter: {topic.LastLetter}, Topic: {topic.Topic}, Frequency: {topic.Frequency}");
+            }
+        }
+
+        //zad3
         static void transformStudents()
         {
-            var students = Generator.GenerateStudentsWithTopicsEasy();
+            var students = Generator.StudentsReady();
 
             var studentsNew = new List<Student>();
 
@@ -846,6 +869,7 @@ namespace LinqExamples
             MethodInfo ?methodInfo = obj.GetType().GetMethod("AddNumbers");
 
             object[] parameters = { 100, 200 };
+            #pragma warning disable
 
             object ?result = methodInfo.Invoke(obj, parameters);
 
