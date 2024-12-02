@@ -38,13 +38,13 @@ namespace LinqExamples
         public int Id { get; set; }
         public int Index { get; set; }
         public string Name { get; set; }
-        public Gender Gender {get;set; }
+        public Gender Gender { get; set; }
         public bool Active { get; set; }
-        public int  DepartmentId { get; set; }
+        public int DepartmentId { get; set; }
 
         public List<string> Topics { get; set; }
-        public StudentWithTopics(int id, int index, string name, Gender gender,bool active, 
-            int departmentId,List<string> topics)
+        public StudentWithTopics(int id, int index, string name, Gender gender, bool active,
+            int departmentId, List<string> topics)
         {
             this.Id = id;
             this.Index = index;
@@ -148,11 +148,11 @@ namespace LinqExamples
         {
             return new List<StudentWithTopics>() {
             new StudentWithTopics(1,19345,"Skarżyńska", Gender.Female,true,1,
-                    new List<string>{"C#","SQL","TEP"}),
+                    new List<string>{"C#","SQL","TEP", "HTML"}),
             new StudentWithTopics(2, 73235, "Zicio", Gender.Male, true,1,
-                    new List<string>{"PSiO","RPiS"}),
+                    new List<string>{"PSiO","RPiS", "HTML"}),
             new StudentWithTopics(3, 47977, "Krysia", Gender.Male, false,2,
-                    new List<string>{"Analiza"}),
+                    new List<string>{"Analiza", "HTML"}),
             new StudentWithTopics(4, 67900, "Klimek", Gender.Female, false,3,
                     new List<string>{"AiSD","AI"}),
             new StudentWithTopics(5, 14019, "Hryba", Gender.Male, true,3,
@@ -160,7 +160,7 @@ namespace LinqExamples
             new StudentWithTopics(6, 14070, "Karsiszek", Gender.Male, true,2,
                     new List<string>{"GameDev","Spring"}),
             new StudentWithTopics(11,10000,"Nowak", Gender.Female,true,2,
-                    new List<string>{"Scala","C++","algorithms"}),
+                    new List<string>{"Scala","C++","algorithms", "HTML"}),
             new StudentWithTopics(12, 10001, "Nowak", Gender.Male, true,1,
                     new List<string>{"C#","Humanities","Problem Solving"}),
             new StudentWithTopics(13, 23444, "Mbappe", Gender.Male, false,1,
@@ -217,9 +217,9 @@ namespace LinqExamples
         {
             var resInt = Generator.GenerateIntsEasy().Where(x => x % 2 == 0);
             resInt.ToList().ForEach(Console.WriteLine);
-            var resStr = Generator.GenerateNamesEasy().Where(s => s.Length>6);
+            var resStr = Generator.GenerateNamesEasy().Where(s => s.Length > 6);
             resStr.ToList().ForEach(Console.WriteLine);
-            var resStud = Generator.StudentsReady().Where(s => s.Active && s.DepartmentId==1);
+            var resStud = Generator.StudentsReady().Where(s => s.Active && s.DepartmentId == 1);
             resStud.ToList().ForEach(Console.WriteLine);
         }
         public static void ClauseWhereSimple()
@@ -246,9 +246,9 @@ namespace LinqExamples
             var resMax = ints.Where(x => x % 2 == 0).Max();
             Console.WriteLine(resMin);
             var strs = Generator.GenerateNamesEasy();
-            var resStrMin1 = strs.Min(); 
+            var resStrMin1 = strs.Min();
             Console.WriteLine(resStrMin1);
-            var resStrMin2 = strs.Min(s=>s.Length); 
+            var resStrMin2 = strs.Min(s => s.Length);
             Console.WriteLine(resStrMin2);
         }
 
@@ -259,20 +259,20 @@ namespace LinqExamples
             var strs1 = new string[] { "one" };
             Console.WriteLine("----- first form, one argument: lambda >>>>>>>>");
             Console.WriteLine(strs.Aggregate((a, b) => a + "," + b));
-            try{ Console.WriteLine(strs0.Aggregate((a, b) => a + "," + b)); }
-               catch (InvalidOperationException e) { Console.WriteLine(e.Message); }
+            try { Console.WriteLine(strs0.Aggregate((a, b) => a + "," + b)); }
+            catch (InvalidOperationException e) { Console.WriteLine(e.Message); }
             Console.WriteLine(strs1.Aggregate((a, b) => a + "," + b));
             Console.WriteLine("----- second form, two arguments: accumulator, lambda");
             Console.WriteLine(strs.Aggregate("", (a, b) => a + "," + b));
             Console.WriteLine(strs0.Aggregate("", (a, b) => a + "," + b));
             Console.WriteLine(strs1.Aggregate("", (a, b) => a + "," + b));
             Console.WriteLine("----- third form, three arguments: accumulator, lambda, finish lambda");
-            Console.WriteLine(strs.Aggregate("",(a, b) => a + "," + b, res=>res.Length));
+            Console.WriteLine(strs.Aggregate("", (a, b) => a + "," + b, res => res.Length));
             Console.WriteLine(strs0.Aggregate("", (a, b) => a + "," + b, res => res.Length));
             Console.WriteLine(strs1.Aggregate("", (a, b) => a + "," + b, res => res.Length));
             Console.WriteLine("----- finding average lenght in a complex way");
-            var resStr = strs.Aggregate((0,""),
-                (tuple, str) => (tuple.Item1 + 1,tuple.Item2 + str), res=>((double)res.Item2.Length)/res.Item1);
+            var resStr = strs.Aggregate((0, ""),
+                (tuple, str) => (tuple.Item1 + 1, tuple.Item2 + str), res => ((double)res.Item2.Length) / res.Item1);
             Console.WriteLine(resStr);
             //var avrLen= strs.Average(s => s.Length);
             //Console.WriteLine(avrLen);
@@ -281,14 +281,14 @@ namespace LinqExamples
         public static void WhereWithPos()
         {
             var resStr = Generator.GenerateNamesEasy()
-                .Where((s,pos) => pos % 2==0);
+                .Where((s, pos) => pos % 2 == 0);
             resStr.ToList().ForEach(Console.WriteLine);
             var resStud = Generator.StudentsReady()
-                .Where((s, pos) => s.Active && pos % 3 == 0 );
+                .Where((s, pos) => s.Active && pos % 3 == 0);
             resStud.ToList().ForEach(Console.WriteLine);
             Console.WriteLine("--------");
             var resStud2 = Generator.StudentsReady()
-                .Where(s=>s.Active)               
+                .Where(s => s.Active)
                 .Where((s, pos) => pos % 3 == 0);
             resStud2.ToList().ForEach(Console.WriteLine);
         }
@@ -297,8 +297,8 @@ namespace LinqExamples
         {
             var resStud = Generator.StudentsReady()
                 .Where(s => s.Index < 20000)
-                .Select(s => new { Header=s.Id + ") "+s.Index, s.Name });
-            foreach(var x in resStud)
+                .Select(s => new { Header = s.Id + ") " + s.Index, s.Name });
+            foreach (var x in resStud)
             {
                 Console.WriteLine($" {x.Header} =====> {x.Name}");
             }
@@ -313,7 +313,7 @@ namespace LinqExamples
             Console.WriteLine("-------------");
             var resStud3 = from s in Generator.StudentsReady()
                            where s.Index < 20000
-                           select (Header : s.Id + ") " + s.Index, s.Name);
+                           select (Header: s.Id + ") " + s.Index, s.Name);
             foreach (var x in resStud3)
             {
                 Console.WriteLine($" {x.Header} =====> {x.Name}");
@@ -356,13 +356,13 @@ namespace LinqExamples
         {
             var resStud = Generator.StudentsReady()
                 .Where(s => s.Index < 20000 && s.Name.Length <= 6)
-                .SelectMany(s => s.Topics,(stud,topic)=> new { stud.Name, topic });
+                .SelectMany(s => s.Topics, (stud, topic) => new { stud.Name, topic });
             resStud.ToList().ForEach(Console.WriteLine);
             Console.WriteLine("----------------");
             var resStud2 = from s in Generator.StudentsReady()
-                          where s.Index < 20000 && s.Name.Length <= 6
-                          from topic in s.Topics
-                          select new { s.Name, topic };
+                           where s.Index < 20000 && s.Name.Length <= 6
+                           from topic in s.Topics
+                           select new { s.Name, topic };
             resStud2.ToList().ForEach(Console.WriteLine);
         }
         public static void TestOrderBy()
@@ -381,10 +381,10 @@ namespace LinqExamples
 
         class MyComparer : IComparer<string>
         {
-            #pragma warning disable
+#pragma warning disable
             int IComparer<string>.Compare(string x, string y)
             {
-                return x.Length-y.Length;
+                return x.Length - y.Length;
             }
         }
         public static void TestOrderByWithComparer()
@@ -407,9 +407,9 @@ namespace LinqExamples
             Generator.StudentsReady().ToList().ForEach(Console.WriteLine);
             Console.WriteLine("------------");
             var resStud = Generator.StudentsReady()
-               .SkipWhile(s=>s.Active)
-               .SkipWhile(s =>!s.Active)
-               .TakeWhile(s=>s.Active);
+               .SkipWhile(s => s.Active)
+               .SkipWhile(s => !s.Active)
+               .TakeWhile(s => s.Active);
             resStud.ToList().ForEach(Console.WriteLine);
         }
 
@@ -424,11 +424,11 @@ namespace LinqExamples
                     new List<string> { "C#", "Java", "algorithms" }));
 
             resStud.ToList().ForEach(Console.WriteLine);
-            
+
             Console.WriteLine("---------------");
             var resStud2 = (from s in studs
-                          where s.Index < 20000 && s.Name.Length <= 6
-                          select s).Count();
+                            where s.Index < 20000 && s.Name.Length <= 6
+                            select s).Count();
 
             studs.Add(new StudentWithTopics(31, 15001, "Wow", Gender.Female, true, 1,
                     new List<string> { "C#" }));
@@ -438,12 +438,12 @@ namespace LinqExamples
 
         public static void TestToDictionaryAndToLookup()
         {
-            var resStud = Generator.StudentsReady().ToDictionary(s=>s.Index, s=>s.Name);
-            resStud.ToList().ForEach(s => Console.WriteLine(s.Key+"-->"+s.Value));
+            var resStud = Generator.StudentsReady().ToDictionary(s => s.Index, s => s.Name);
+            resStud.ToList().ForEach(s => Console.WriteLine(s.Key + "-->" + s.Value));
 
             Console.WriteLine("---------------");
             var resStud2 = Generator.StudentsReady().ToLookup(s => s.Name);
-            foreach(var dept in resStud2)
+            foreach (var dept in resStud2)
             {
                 Console.WriteLine(dept.Key);
                 resStud2[dept.Key].ToList().ForEach(s => Console.WriteLine("  " + s));
@@ -467,17 +467,17 @@ namespace LinqExamples
         {
             var resStud = from s in Generator.StudentsReady()
                           group s by new { s.Active, s.Gender } into sGroup
-                          orderby sGroup.Key.Active,sGroup.Key.Gender
+                          orderby sGroup.Key.Active, sGroup.Key.Gender
                           select new
                           {
                               Active = sGroup.Key.Active,
                               sGroup.Key.Gender, // simpler
-                              Students = sGroup.OrderBy(s=>s.Name)
+                              Students = sGroup.OrderBy(s => s.Name)
                           };
 
             foreach (var group in resStud)
             {
-                Console.WriteLine((group.Active ? "active" : "no active") + "      "+group.Gender);
+                Console.WriteLine((group.Active ? "active" : "no active") + "      " + group.Gender);
                 group.Students.ToList().ForEach(s => Console.WriteLine("  " + s));
             }
         }
@@ -509,7 +509,7 @@ namespace LinqExamples
                                Department = d,
                                Students = dGroup
                            };
-                        
+
 
             foreach (var group in resStud2)
             {
@@ -567,7 +567,7 @@ namespace LinqExamples
                          .Join(Generator.GenerateDepartmentsEasy(),
                         stud => stud.DepartmentId,
                         dept => dept.Id,
-                        (student,department) => new
+                        (student, department) => new
                         {
                             DepartmentName = department.Name,
                             StudentName = student.Name
@@ -602,8 +602,8 @@ namespace LinqExamples
                           select new
                           {
                               Number = num,
-                              Word=d
-                           };
+                              Word = d
+                          };
             foreach (var elem in resCart)
             {
                 Console.WriteLine($"{elem.Number} -> {elem.Word}");
@@ -612,21 +612,22 @@ namespace LinqExamples
             var resCart2 = Generator.GenerateIntsEasy()
                            .Where(num => num % 2 == 0)
                            .SelectMany(
-                                s=>Generator.GenerateNamesEasy().Where(s=>s.Length < 7),
-                                (n,s)=>new {
-                                   Number = n,
-                                   Word = s
+                                s => Generator.GenerateNamesEasy().Where(s => s.Length < 7),
+                                (n, s) => new
+                                {
+                                    Number = n,
+                                    Word = s
                                 });
             foreach (var elem in resCart2)
             {
-//                Console.WriteLine($"{elem.Number} -> {elem.Word}");
+                //                Console.WriteLine($"{elem.Number} -> {elem.Word}");
                 Console.WriteLine($"{elem}");
             }
         }
 
         class Comp : IEqualityComparer<StudentWithTopics>
         {
-            #pragma warning disable
+#pragma warning disable
             public bool Equals(StudentWithTopics x, StudentWithTopics y)
             {
                 return x.Id == x.Id;
@@ -640,7 +641,7 @@ namespace LinqExamples
         public static void TestDistinc()
         {
             var set1 = Generator.StudentsReady()
-                       .Where(s => s.Id >= 0 && s.Id <=2)
+                       .Where(s => s.Id >= 0 && s.Id <= 2)
                        .ToList();
             set1.Add(new StudentWithTopics(1, 12345, "Nowak", Gender.Female, true, 1,
                     new List<string> { "C#", "PHP", "algorithms" })); // copy od first student
@@ -665,23 +666,28 @@ namespace LinqExamples
         {
             var set1 = Generator.StudentsReady()
                        .Where(s => s.Id >= 1 && s.Id <= 4)
-                       .Select( s=>new
+                       .Select(s => new
                        {
-                           s.Id, s.Index, s.Name
+                           s.Id,
+                           s.Index,
+                           s.Name
                        }
                        );
             var set2 = Generator.StudentsReady()
                        .Where(s => s.Id >= 3 && s.Id <= 6)
                        .Select(s => new
-                        {
-                            s.Id, s.Index, s.Name
-                        }
+                       {
+                           s.Id,
+                           s.Index,
+                           s.Name
+                       }
                        );
             set1.Union(set2).ToList().ForEach(Console.WriteLine);
         }
 
-        static void TestClauseWithoutLet() {
-            ClauseWithoutLet(".","*");
+        static void TestClauseWithoutLet()
+        {
+            ClauseWithoutLet(".", "*");
         }
         static void ClauseWithoutLet(string rootDirectory, string searchPattern)
         {
@@ -736,7 +742,7 @@ namespace LinqExamples
             ReflectionMechanism();
         }
 
-//zad1
+        //zad1
         static void groupStudents(int n)
         {
             var students = Generator.StudentsReady();
@@ -758,15 +764,15 @@ namespace LinqExamples
             // var len=groupedStudents2.Length;
 
             foreach (var group in groupedStudents2)
-             {
+            {
                 Console.WriteLine($"Grupa: {group.Key}");
-                
+
                 foreach (var studentGroup in group)
                 {
                     var student = studentGroup.Student;
                     Console.WriteLine($"  {student.Name}, {student.Index}");
                 }
-             }
+            }
         }
 
 
@@ -809,7 +815,7 @@ namespace LinqExamples
         static void sortTopicsByFreqAndLastLetterOfName()
         {
             var topicsFrequencyByLastLetter = Generator.StudentsReady()
-                .GroupBy(student => student.Name[^1])
+                .GroupBy(student => student.Name[0])
                 .SelectMany(group => group
                     .SelectMany(student => student.Topics)
                     .GroupBy(topic => topic)
@@ -834,14 +840,14 @@ namespace LinqExamples
 
             var topics = Generator.GenerateTopicsEasy();
 
-            foreach(StudentWithTopics stud in students)
+            foreach (StudentWithTopics stud in students)
             {
                 var transformedTopics = new List<int>();
-                foreach(var topic in stud.Topics)
+                foreach (var topic in stud.Topics)
                 {
-                    foreach(Topic top in topics)
+                    foreach (Topic top in topics)
                     {
-                        if (top.TopicName ==  topic)
+                        if (top.TopicName == topic)
                         {
                             transformedTopics.Add(top.Id);
                             break;
@@ -852,45 +858,33 @@ namespace LinqExamples
             }
 
             Console.WriteLine("Po transoformacji:\n");
-            foreach(Student student in studentsNew)
+            foreach (Student student in studentsNew)
             {
                 //magia to_string
                 Console.WriteLine("Student: " + student);
             }
 
         }
-//zad4
+        //zad4
 
         static void ReflectionMechanism()
         {
             MyClass newObject = new MyClass();
 
-            object ?obj = newObject;
+            object? obj = newObject;
 
-            MethodInfo ?methodInfo = obj.GetType().GetMethod("mulNums");
+            MethodInfo? methodInfo = obj.GetType().GetMethod("mulNums");
 
             object[] parameters = { 100, 200 };
-            #pragma warning disable
+// #pragma warning disable
 
-            object ?result = methodInfo.Invoke(obj, parameters);
-
+            object? result = methodInfo.Invoke(obj, parameters);
             Console.WriteLine($"Wynik invoka: {result}");
 
-            object ?objResult = result;
+            object? objResult = result;
 
             Console.WriteLine($"Wynik w obiekcie: {objResult}");
 
         }
-    //     static void extraTask()
-    //     {
-    //         String exampleString = "ania";
-    //         object obj = exampleString;
-
-    //         MethodInfo methodInfo = obj.GetType().GetMethod("IndexOf", new Type[] {typeof(string), typeof(int)});
-
-    //         object result = methodInfo.Invoke(exampleString, new object[] {"a", 1});
-
-    //         Console.WriteLine($"result = {result}");
-    //     }
     }
 }
