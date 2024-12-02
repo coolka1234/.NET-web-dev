@@ -76,6 +76,7 @@ namespace LinqExamples
         }
     }
 
+    //student z listą topiców jako intów
     public class Student
     {
         public int Id { get; set; }
@@ -106,6 +107,7 @@ namespace LinqExamples
             return result;
         }
     }
+    //klasa do zad4
     public class MyClass
     {
         public int AddNumbers(int a, int b)
@@ -727,10 +729,11 @@ namespace LinqExamples
             sortTopicsByFreq();
             sortTopicsByFreqAndGender();
             transformStudents();
-            task4();
-            extraTask();
+            ReflectionMechanism();
+            // extraTask();
         }
 
+//zad1
         static void groupStudents(int n)
         {
             var students = Generator.GenerateStudentsWithTopicsEasy();
@@ -762,6 +765,8 @@ namespace LinqExamples
              }
         }
 
+
+        //zad2a
         static void sortTopicsByFreq()
         {
             var topicsFrequency = Generator.GenerateStudentsWithTopicsEasy()
@@ -777,7 +782,7 @@ namespace LinqExamples
                 Console.WriteLine($"Topic: {topic.Topic}, Frequency: {topic.Frequency}");
             }
         }
-
+//zad2b
         static void sortTopicsByFreqAndGender()
         {
             var topicsFrequencyByGender = Generator.GenerateStudentsWithTopicsEasy()
@@ -798,6 +803,7 @@ namespace LinqExamples
             }
         }
 
+//zad3
         static void transformStudents()
         {
             var students = Generator.GenerateStudentsWithTopicsEasy();
@@ -830,36 +836,37 @@ namespace LinqExamples
             }
 
         }
+//zad4
 
-        static void task4()
+        static void ReflectionMechanism()
         {
             MyClass myObject = new MyClass();
 
-            object obj = myObject;
+            object ?obj = myObject;
 
-            MethodInfo methodInfo = obj.GetType().GetMethod("AddNumbers");
+            MethodInfo ?methodInfo = obj.GetType().GetMethod("AddNumbers");
 
             object[] parameters = { 5, 10 };
 
-            object result = methodInfo.Invoke(obj, parameters);
+            object ?result = methodInfo.Invoke(obj, parameters);
 
             Console.WriteLine($"Result: {result}");
 
-            object resultStoredInObject = result;
+            object ?resultStoredInObject = result;
 
             Console.WriteLine($"Result in class object: {resultStoredInObject}");
 
         }
-        static void extraTask()
-        {
-            String exampleString = "ania";
-            object obj = exampleString;
+    //     static void extraTask()
+    //     {
+    //         String exampleString = "ania";
+    //         object obj = exampleString;
 
-            MethodInfo methodInfo = obj.GetType().GetMethod("IndexOf", new Type[] {typeof(string), typeof(int)});
+    //         MethodInfo methodInfo = obj.GetType().GetMethod("IndexOf", new Type[] {typeof(string), typeof(int)});
 
-            object result = methodInfo.Invoke(exampleString, new object[] {"a", 1});
+    //         object result = methodInfo.Invoke(exampleString, new object[] {"a", 1});
 
-            Console.WriteLine($"result = {result}");
-        }
+    //         Console.WriteLine($"result = {result}");
+    //     }
     }
 }
