@@ -146,29 +146,29 @@ namespace LinqExamples
         public static List<StudentWithTopics> GenerateStudentsWithTopicsEasy()
         {
             return new List<StudentWithTopics>() {
-            new StudentWithTopics(1,12345,"Nowak", Gender.Female,true,1,
-                    new List<string>{"C#","PHP","algorithms"}),
-            new StudentWithTopics(2, 13235, "Kowalski", Gender.Male, true,1,
-                    new List<string>{"C#","C++","fuzzy logic"}),
-            new StudentWithTopics(3, 13444, "Schmidt", Gender.Male, false,2,
-                    new List<string>{"Basic","Java"}),
-            new StudentWithTopics(4, 14000, "Newman", Gender.Female, false,3,
-                    new List<string>{"JavaScript","neural networks"}),
-            new StudentWithTopics(5, 14001, "Bandingo", Gender.Male, true,3,
-                    new List<string>{"Java","C#"}),
-            new StudentWithTopics(6, 14100, "Miniwiliger", Gender.Male, true,2,
-                    new List<string>{"algorithms","web programming"}),
-            new StudentWithTopics(11,22345,"Nowak", Gender.Female,true,2,
-                    new List<string>{"C#","PHP","algorithms"}),
-            new StudentWithTopics(12, 23235, "Nowak", Gender.Male, true,1,
-                    new List<string>{"C#","C++","fuzzy logic"}),
-            new StudentWithTopics(13, 23444, "Schmidt", Gender.Male, false,1,
-                    new List<string>{"Basic","Java"}),
-            new StudentWithTopics(14, 24000, "Newman", Gender.Female, false,1,
-                    new List<string>{"JavaScript","neural networks"}),
-            new StudentWithTopics(15, 24001, "Bandingo", Gender.Male, true,3,
-                    new List<string>{"Java","C#"}),
-            new StudentWithTopics(16, 24100, "Bandingo", Gender.Male, true,2,
+            new StudentWithTopics(1,19345,"Skarżyńska", Gender.Female,true,1,
+                    new List<string>{"C#","SQL","TEP"}),
+            new StudentWithTopics(2, 73235, "Zicio", Gender.Male, true,1,
+                    new List<string>{"PSiO","RPiS"}),
+            new StudentWithTopics(3, 47977, "Krysia", Gender.Male, false,2,
+                    new List<string>{"Analiza"}),
+            new StudentWithTopics(4, 67900, "Klimek", Gender.Female, false,3,
+                    new List<string>{"AiSD","AI"}),
+            new StudentWithTopics(5, 14019, "Hryba", Gender.Male, true,3,
+                    new List<string>{"Servers","OCaml"}),
+            new StudentWithTopics(6, 14070, "Karsiszek", Gender.Male, true,2,
+                    new List<string>{"GameDev","Spring"}),
+            new StudentWithTopics(11,10000,"Nowak", Gender.Female,true,2,
+                    new List<string>{"Scala","C++","algorithms"}),
+            new StudentWithTopics(12, 10001, "Nowak", Gender.Male, true,1,
+                    new List<string>{"C#","Humanities","Problem Solving"}),
+            new StudentWithTopics(13, 23444, "Mbappe", Gender.Male, false,1,
+                    new List<string>{"Scoring Goals","Staying Onside"}),
+            new StudentWithTopics(14, 32900, "Jurek", Gender.Female, false,1,
+                    new List<string>{"React","HTML"}),
+            new StudentWithTopics(15, 44000, "Lewandowski", Gender.Male, true,3,
+                    new List<string>{"Neural Networks","First Touch"}),
+            new StudentWithTopics(16, 32000, "Krawiec", Gender.Male, true,2,
                     new List<string>{"algorithms","web programming"}),
             };
         }
@@ -195,9 +195,9 @@ namespace LinqExamples
         {
             return new List<Department>() {
             new Department(1,"Computer Science"),
-            new Department(2,"Electronics"),
+            new Department(2,"Construction"),
             new Department(3,"Mathematics"),
-            new Department(4,"Mechanics")
+            new Department(4,"Management"),
             };
         }
 
@@ -711,11 +711,11 @@ namespace LinqExamples
             //TestTakeAndSkip();
             //TestTakeWhileAndSkipWhile();
             //TestLazyExecution();
-            //TestToDictionaryAndToLookup(); ????
+            //TestToDictionaryAndToLookup(); 
             //TestGroupBy();
             //TestGroupByComplex();
             //TestGroupJoin(); 
-            //TestJoinSpecial();  ???
+            //TestJoinSpecial();  
             //TestJoin();
             //CartesianProduct();
             //TestDistinc();
@@ -730,7 +730,6 @@ namespace LinqExamples
             sortTopicsByFreqAndGender();
             transformStudents();
             ReflectionMechanism();
-            // extraTask();
         }
 
 //zad1
@@ -751,7 +750,6 @@ namespace LinqExamples
                         .ThenBy(s => s.Index)
                         .Select((student, index) => (Student: student, Group: index / n))
                         .GroupBy(studentGroup => studentGroup.Group);
-                        //.SelectMany(studentGroup => studentGroup.Select(groupedStudent => groupedStudent.Student));
 
             foreach (var group in groupedStudents2)
              {
@@ -776,7 +774,7 @@ namespace LinqExamples
                 .Select(group => new { Topic = group.Key, Frequency = group.Count() })
                 .ToList();
 
-            Console.WriteLine("Topics sorted by frequency:");
+            Console.WriteLine("Posorotowane przez Frekwencję:");
             foreach (var topic in topicsFrequency)
             {
                 Console.WriteLine($"Topic: {topic.Topic}, Frequency: {topic.Frequency}");
@@ -796,7 +794,7 @@ namespace LinqExamples
             .ToList();
 
 
-            Console.WriteLine("Topics sorted by frequency and gender:");
+            Console.WriteLine("Posortowane topici przez freq i Gender:");
             foreach (var topic in topicsFrequencyByGender)
             {
                 Console.WriteLine($"Gender: {topic.Gender}, Topic: {topic.Topic}, Frequency: {topic.Frequency}");
@@ -808,7 +806,7 @@ namespace LinqExamples
         {
             var students = Generator.GenerateStudentsWithTopicsEasy();
 
-            var studentsVer2 = new List<Student>();
+            var studentsNew = new List<Student>();
 
             var topics = Generator.GenerateTopicsEasy();
 
@@ -826,12 +824,13 @@ namespace LinqExamples
                         }
                     }
                 }
-                studentsVer2.Add(new Student(stud.Id, stud.Index, stud.Name, stud.Gender, stud.Active, stud.DepartmentId, transformedTopics));
+                studentsNew.Add(new Student(stud.Id, stud.Index, stud.Name, stud.Gender, stud.Active, stud.DepartmentId, transformedTopics));
             }
 
-            Console.WriteLine("students transformed to class Student:");
-            foreach(Student student in studentsVer2)
+            Console.WriteLine("Po transoformacji:\n");
+            foreach(Student student in studentsNew)
             {
+                //magia to_string
                 Console.WriteLine("Student: " + student);
             }
 
@@ -846,15 +845,15 @@ namespace LinqExamples
 
             MethodInfo ?methodInfo = obj.GetType().GetMethod("AddNumbers");
 
-            object[] parameters = { 5, 10 };
+            object[] parameters = { 100, 200 };
 
             object ?result = methodInfo.Invoke(obj, parameters);
 
-            Console.WriteLine($"Result: {result}");
+            Console.WriteLine($"Wynik invoka: {result}");
 
             object ?resultStoredInObject = result;
 
-            Console.WriteLine($"Result in class object: {resultStoredInObject}");
+            Console.WriteLine($"Wynik w obiekcie: {resultStoredInObject}");
 
         }
     //     static void extraTask()
