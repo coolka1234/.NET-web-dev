@@ -20,6 +20,18 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
+
+app.MapControllerRoute(
+    name: "MP",
+    pattern: "Home/MP",
+    defaults: new { controller = "Home", action = "MyPage" });
+
+app.MapControllerRoute(
+    name: "MP2",
+    pattern: "MP/{number}/{name},{other}",
+    defaults: new { controller = "Home", action = "MyPage2" });
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

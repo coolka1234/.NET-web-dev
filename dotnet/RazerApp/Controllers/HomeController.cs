@@ -30,6 +30,14 @@ public class HomeController : Controller
     }
     public IActionResult MyPage()
     {
+        ViewBag.Message = "Hello, World!";
+        ViewBag.Date = DateTime.Now;
         return View();
+    }
+    public IActionResult MyPage2(int number, string name, string? other)
+    {
+        ViewBag.Message = $"Number: {number}, Name: {name}, Other: {other}";
+        ViewBag.Date = DateTime.Now;
+        return View("MyPage");
     }
 }
