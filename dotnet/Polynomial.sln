@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SortingReflections", "Sorti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionSR", "SortingReflections\SolutionSR\SolutionSR.csproj", "{84ED2477-960C-4E1E-9916-87461D1959A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazerApp", "RazerApp\RazerApp.csproj", "{B8673873-921D-4742-A0AA-6ED7B61A18C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{84ED2477-960C-4E1E-9916-87461D1959A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84ED2477-960C-4E1E-9916-87461D1959A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84ED2477-960C-4E1E-9916-87461D1959A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8673873-921D-4742-A0AA-6ED7B61A18C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8673873-921D-4742-A0AA-6ED7B61A18C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8673873-921D-4742-A0AA-6ED7B61A18C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8673873-921D-4742-A0AA-6ED7B61A18C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{84ED2477-960C-4E1E-9916-87461D1959A6} = {F1ED617C-E660-4C6F-92DC-E0060173D722}
