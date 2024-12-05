@@ -26,16 +26,21 @@ public class ToolController : Controller
         {
             double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
             double x2 = (-b - Math.Sqrt(delta)) / (2 * a);
-            ViewBag.Message = $"x1 = {x1}, x2 = {x2}";
+            ViewBag.TwoResults = $"x1 = {x1}, x2 = {x2}";
         }
         else if (delta == 0)
         {
+            if(a == 0)
+            {
+                ViewBag.AllSolution = "0=0";
+                return View("Solve");
+            }
             double x = -b / (2 * a);
-            ViewBag.Message = $"x = {x}";
+            ViewBag.OneResult = $"x = {x}";
         }
         else
         {
-            ViewBag.Message = "No solution";
+            ViewBag.NoResult = "No solution";
         }
         return View("Solve");
     }
