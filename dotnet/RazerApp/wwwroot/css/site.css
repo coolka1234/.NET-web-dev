@@ -40,3 +40,21 @@ body {
   margin-top: 20px;
   color: black;
 }
+.title{
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.counter{
+  text-align: center;
+  margin-top: 20px;
+  color: yellowgreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.result{
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

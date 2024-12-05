@@ -53,18 +53,19 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "Game2",
-    pattern: "Game/Set/{n}",
+    pattern: "Set,{n}",
     defaults: new { controller = "Game", action = "Set" });
 
 app.MapControllerRoute(
     name: "Game3",
-    pattern: "Game/Draw",
+    pattern: "Draw",
     defaults: new { controller = "Game", action = "Draw" });
 
 app.MapControllerRoute(
     name: "Game4",
-    pattern: "Game/Guess/{n}",
+    pattern: "Guess,{n}",
     defaults: new { controller = "Game", action = "Guess" });
+
 
 
 app.Run();

@@ -18,18 +18,26 @@ public class GameController: Controller
     {
         return View();
     }
+    public IActionResult Game()
+    {
+        return View();
+    }  
     public IActionResult Set(int n)
     {
         number = n;
+        if(n < 1)
+        {
+            number = 1;
+        }
         var random= new Random();
         guess = random.Next(0, n-1);
-        return View();
+        return View("Game");
     }
     public IActionResult Draw()
     {
         var random= new Random();
         guess = random.Next(0, number-1);
-        return View();
+        return View("Game");
     }
     public IActionResult Guess(int n)
     {
@@ -49,6 +57,6 @@ public class GameController: Controller
             counter++;
         }
         ViewBag.Counter = counter;
-        return View();
+        return View("Game");
     }
 }
