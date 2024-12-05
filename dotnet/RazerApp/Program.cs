@@ -36,4 +36,14 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "Tool",
+    pattern: "Tool/{controller=Tool}/{action=Index}/{id?}",
+    defaults: new { controller = "Tool", action = "Index" });
+
+app.MapControllerRoute(
+    name: "Tool2",
+    pattern: "Tool/Solve/{a}/{b}/{c}",
+    defaults: new { controller = "Tool", action = "Solve2" });
+
 app.Run();

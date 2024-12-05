@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RazerApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+292c4188f511641dceef83c343b12f44119ca5d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcef7e33652d676fd472d4b96de5a8039147c991")]
 [assembly: System.Reflection.AssemblyProductAttribute("RazerApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RazerApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
