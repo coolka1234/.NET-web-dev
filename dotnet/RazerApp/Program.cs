@@ -46,4 +46,25 @@ app.MapControllerRoute(
     pattern: "Tool/Solve/{a}/{b}/{c}",
     defaults: new { controller = "Tool", action = "Solve2" });
 
+app.MapControllerRoute(
+    name: "Game",
+    pattern: "Game/{controller=Game}/{action=Index}/{id?}",
+    defaults: new { controller = "Game", action = "Index" });
+
+app.MapControllerRoute(
+    name: "Game2",
+    pattern: "Game/Set/{n}",
+    defaults: new { controller = "Game", action = "Set" });
+
+app.MapControllerRoute(
+    name: "Game3",
+    pattern: "Game/Draw",
+    defaults: new { controller = "Game", action = "Draw" });
+
+app.MapControllerRoute(
+    name: "Game4",
+    pattern: "Game/Guess/{n}",
+    defaults: new { controller = "Game", action = "Guess" });
+
+
 app.Run();

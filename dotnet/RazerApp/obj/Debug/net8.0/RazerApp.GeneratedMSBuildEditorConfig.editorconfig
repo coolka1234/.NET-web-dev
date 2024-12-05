@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/coolka/projects/web/labnet/dotnet/RazerApp
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/coolka/projects/web/labnet/dotnet/RazerApp/Views/Game/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2FtZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/coolka/projects/web/labnet/dotnet/RazerApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
