@@ -59,4 +59,9 @@ public class GameController: Controller
         ViewBag.Counter = counter;
         return View("Game");
     }
+    public IActionResult SetDraw(int n){
+        Set(n);
+        Draw();
+        return View("Game");
+    }
 }
