@@ -70,6 +70,11 @@ app.MapControllerRoute(
     pattern: "SetDraw,{n}",
     defaults: new { controller = "Game", action = "SetDraw" });
 
+app.MapControllerRoute(
+    name: "Game6",
+    pattern: "Set,{low},{high}",
+    defaults: new { controller = "Game", action = "Set" });
+
 
 
 app.Run();

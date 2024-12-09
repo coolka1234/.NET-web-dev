@@ -22,6 +22,23 @@ public class ToolController : Controller
     public IActionResult Solve2(int a, int b, int c)
     {
         int delta = b * b - 4 * a * c;
+        if(a==0){
+            if(b==0){
+                if(c==0){
+                    ViewBag.AllSolution = "0=0";
+                    return View("Solve");
+                }
+                else{
+                    ViewBag.NoResult = "No solution";
+                    return View("Solve");
+                }
+            }
+            else{
+                double x = -c / b;
+                ViewBag.OneResult = $"x = {x}";
+                return View("Solve");
+            }
+        }
         if (delta>0)
         {
             double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
