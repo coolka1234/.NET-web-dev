@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "om/ccs3YhUohKFt3G7aOWszbVPWXFtQkTZ1E53FbJzmZG2wkUPSFqN4vnTUkmyoxsgCpu2IXqeB2yX0UItgcVQ==",
+  "dgSpecHash": "9V4tgTTCtgA=",
   "success": true,
   "projectFilePath": "/home/coolka/projects/web/labnet/dotnet/RazerApp/RazerApp.csproj",
   "expectedPackageFiles": [
-    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+    "/home/coolka/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "/home/coolka/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.11/microsoft.netcore.app.host.linux-x64.8.0.11.nupkg.sha512"
   ],
   "logs": []
 }

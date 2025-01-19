@@ -29,3 +29,6 @@
 /home/coolka/projects/web/labnet/dotnet/RazerApp/obj/Debug/net8.0/RazerApp.pdb
 /home/coolka/projects/web/labnet/dotnet/RazerApp/obj/Debug/net8.0/RazerApp.genruntimeconfig.cache
 /home/coolka/projects/web/labnet/dotnet/RazerApp/obj/Debug/net8.0/ref/RazerApp.dll
+/home/coolka/projects/web/labnet/dotnet/RazerApp/bin/Debug/net8.0/RazerApp.staticwebassets.endpoints.json
+/home/coolka/projects/web/labnet/dotnet/RazerApp/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/home/coolka/projects/web/labnet/dotnet/RazerApp/obj/Debug/net8.0/staticwebassets/msbuild.RazerApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

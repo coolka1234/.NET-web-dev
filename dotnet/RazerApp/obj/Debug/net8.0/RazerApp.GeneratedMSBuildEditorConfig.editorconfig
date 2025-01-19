@@ -17,6 +17,8 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /home/coolka/projects/web/labnet/dotnet/RazerApp
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
 [/home/coolka/projects/web/labnet/dotnet/RazerApp/Views/Game/Game.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2FtZS9HYW1lLmNzaHRtbA==

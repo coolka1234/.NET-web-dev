@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "/home/coolka/projects/web/labnet/dotnet/RazerApp/obj/Debug/net8.0/scopedcss/projectbundle/RazerApp.bundle.scp.css",
-      "PackagePath": "staticwebassets/RazerApp.bundle.scp.css"
+      "PackagePath": "staticwebassets/RazerApp.czcdcyzs8z.bundle.scp.css"
     },
     {
       "Id": "/home/coolka/projects/web/labnet/dotnet/RazerApp/wwwroot/css/site.css",
@@ -243,6 +243,10 @@
     {
       "Id": "/home/coolka/projects/web/labnet/dotnet/RazerApp/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.RazerApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.RazerApp.Microsoft.AspNetCore.StaticWebAssets.props",
